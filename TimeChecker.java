@@ -1,5 +1,7 @@
 package TimeChecker;
 
+package TimeChecker;
+
 public class TimeChecker {
     public static void main(String[] args) {
         Thread clockThread = new Thread(() -> {
@@ -17,6 +19,12 @@ public class TimeChecker {
         });
 
         Thread messageThread = new Thread(() -> {
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
             while (true) {
                 System.out.println("Минуло 5 секунд");
                 try {
@@ -27,9 +35,7 @@ public class TimeChecker {
             }
         });
 
-
         clockThread.start();
         messageThread.start();
     }
 }
-
