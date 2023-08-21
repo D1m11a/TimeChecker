@@ -1,7 +1,5 @@
 package TimeChecker;
 
-package TimeChecker;
-
 public class TimeChecker {
     public static void main(String[] args) {
         Thread clockThread = new Thread(() -> {
