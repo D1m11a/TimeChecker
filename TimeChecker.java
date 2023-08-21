@@ -17,16 +17,10 @@ public class TimeChecker {
         });
 
         Thread messageThread = new Thread(() -> {
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
             while (true) {
-                System.out.println("Минуло 5 секунд");
                 try {
                     Thread.sleep(5000);
+                    System.out.println("Минуло 5 секунд");
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
